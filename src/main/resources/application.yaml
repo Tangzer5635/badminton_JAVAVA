@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: badminton
+
+  shell:
+    interactive:
+      enabled: true
+
+  batch:
+    job:
+      enabled: false
+
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/db_badminton
+    username: postgres
+    password: azerty+35
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+
+shell:
+  out:
+    info: CYAN
+    success: GREEN
+    error: RED
+    warning: YELLOW

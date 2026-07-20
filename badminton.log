@@ -1,0 +1,57 @@
+1784546396491:help
+1784551699338:badiste-search
+1784551707244:badiste-search -n test
+1784552405235:help
+1784552420411:badiste-search --nom Le Buhé
+1784552440323:badiste-search -n Tanguy
+1784553341923:help
+1784553346769:import
+1784553368540:exit
+1784553379582:import --file joueurs-import.csv
+1784553638890:help
+1784553667632:badiste-search -n
+1784553696359:badiste-search --nom TRAN
+1784553753410:classement-top
+1784553765599:shell:>
+1784553790199:classement-top --discipline SH --nb 10
+1784553806008:•	match-add-simple --j1 --s1j1 --s2j1 [--s3j1] --j2 --s1j2 --s2j2 [--s3j2] --discipline --dateMatch --lieu
+1784553945776:badiste-search --nom TRAN
+1784554190215:badiste-search -n "ZZZZZ"
+1784554198961:badiste-search -n "A"
+1784554209648:badiste-search -n A
+1784554220801:clear
+1784554234428:help
+1784554262663:classement-top -d SD -n 5
+1784554280902:match-add-simple --j1 2 --s1j1 21 --s2j1 19 \\\n                             --j2 1 --s1j2 15 --s2j2 21 \\\n                             --discipline SH --dateMatch "2026-07-20T14:00" \\\n                             --lieu "Rennes"
+1784554301846:match-add-simple --j1 3 --s1j1 21 --s2j1 15 --s3j1 21 \\\n                             --j2 4 --s1j2 18 --s2j2 21 --s3j2 19 \\\n                             --discipline SD --dateMatch "2026-07-20T15:30" \\\n                             --lieu "Paris"
+1784554309765:match-add-simple --j1 2 --s1j1 21 --s2j1 19 \\\n                             --j2 1 --s1j2 15 --s2j2 21 \\\n                             --discipline DH --dateMatch "2026-07-20T14:00" \\\n                             --lieu "Rennes"
+1784554320293:match-add-simple --j1 2 --s1j1 21 --s2j1 19 \\\n                             --j2 1 --s1j2 15 --s2j2 21 \\\n                             --discipline SH --dateMatch "20-07-2026" \\\n                             --lieu "Rennes"
+1784555797969:badiste-search -n LEFEBVRE
+1784555801878:classement-top --discipline SH --nb 10
+1784555806106:classement-top -d SD -n 5
+1784555894301:debug-badistes
+1784556184175:dedb
+1784556187925:ebg
+1784556189534:eu
+1784556193830:ebg
+1784556196088:eugdudbgdbgdbgdudu
+1784556197910:eu
+1784556199094:ebgdbg
+1784556201476:du
+1784556204751:ebgei
+1784556206710:xi
+1784556377824:classement-top -d SR -n 5
+1784556419312:badiste-search -n LEFEBVRE
+1784556432694:classement-top --discipline SH --nb 10
+1784556440994:match-add-simple --j1 2 --s1j1 21 --s2j1 18 \\\n                                --j2 3 --s1j2 19 --s2j2 21 \\\n                                --discipline SH --dateMatch "2026-07-20T14:00" \\\n                                --lieu "Rennes"
+1784556579370:match-add-simple --j1 5 --s1j1 12 --s2j1 21 --j2 15 --s1j2 15 --s2j2 18 --discipline SD --dateMatch "2026-09-20T14:00" --lieu "Gymnase du Quartier"
+1784556717988:sr
+1784556723043:otehduuir
+1784556730895:head -5 joueurs-import.csv
+1784557139814:import --file joueurs-import.csv
+1784557620037:caeetop--isilneS -b
+1784557641362:classement-top --discipline SH --nb 10
+1784557889613:classement-top -d SD -n 5
+1784557893116:classement-top --discipline SH --nb 10
+1784557909850:match-add-simple --j1 2 --s1j1 21 --s2j1 18 \\\n                                --j2 3 --s1j2 19 --s2j2 21 \\\n                                --discipline SH --dateMatch "2026-07-20T14:00" \\\n                                --lieu "Rennes"
+1784557912794:match-add-simple --j1 5 --s1j1 12 --s2j1 21 --j2 15 --s1j2 15 --s2j2 18 --discipline SD --dateMatch "2026-09-20T14:00" --lieu "Gymnase du Quartier"
