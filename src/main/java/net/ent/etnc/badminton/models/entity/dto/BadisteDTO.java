@@ -11,6 +11,8 @@ import java.time.LocalDate;
 @NoArgsConstructor
 public class BadisteDTO {
 
+    private Long id;
+
     private String nom;
 
     private String prenom;

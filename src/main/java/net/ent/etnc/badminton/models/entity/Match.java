@@ -16,16 +16,12 @@ import java.util.Map;
 
 @Entity
 @Table(name = "MATCH",
-        // Le statut NE fait PAS partie de l'identité du match : il change au cours de sa vie
         uniqueConstraints = @UniqueConstraint(name = "uk___match___discipline__date_match__lieu", columnNames = {"discipline", "date_match", "lieu"}))
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @EqualsAndHashCode(callSuper = false, of = {"discipline", "dateMatch", "lieu"})
 @ToString(callSuper = true, of = {"discipline", "dateMatch", "lieu", "statut"})
 public class Match extends AbstractEntity {
 
-    //<Entite, Valeur embarquée> : le score de chaque badiste participant.
-    // Score est @Embeddable : ses colonnes (score_set1/2/3) viennent de la classe Score,
-    // donc PAS de @Column ici (réservé aux valeurs basiques type Integer).
     @ElementCollection(fetch = FetchType.LAZY)
     @CollectionTable(name = "match_badiste",
             joinColumns = @JoinColumn(name = "match_id",

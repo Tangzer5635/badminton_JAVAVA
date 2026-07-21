@@ -1,6 +1,8 @@
 package net.ent.etnc.badminton.models.facades;
 
 import net.ent.etnc.badminton.models.entity.Match;
+import net.ent.etnc.badminton.models.entity.Score;
+import net.ent.etnc.badminton.models.entity.dto.BadisteDTO;
 import net.ent.etnc.badminton.models.entity.references.Discipline;
 import net.ent.etnc.badminton.models.entity.references.SerieClassement;
 import net.ent.etnc.badminton.models.facades.exceptions.FacadeMetierException;
@@ -26,4 +28,6 @@ public interface MatchFacade {
                              Integer s1, Integer s2, Integer s3) throws FacadeMetierException;
 
     List<Match> lesMatchsJoueEnTrioSet() throws FacadeMetierException;
+
+    Match ajouterMatchSimple(Discipline discipline, LocalDateTime dateMatch, String lieu, BadisteDTO badisteDTO, Score score) throws FacadeMetierException;
 }

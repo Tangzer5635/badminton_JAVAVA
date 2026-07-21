@@ -15,14 +15,12 @@ import java.util.List;
 
 @Entity
 @Table(name = "BADISTE",
-        // Le badiste est identifié de façon UNIQUE par son numéro de licence (cf. sujet)
         uniqueConstraints = @UniqueConstraint(name = "uk___badiste___numero_licence", columnNames = {"numero_licence"}))
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @EqualsAndHashCode(callSuper = false, of = {"numeroLicence"})
 @ToString(callSuper = true, of = {"nom", "prenom", "numeroLicence", "categorieAge", "sexe"})
 public class Badiste extends AbstractEntity {
 
-    // 1..3 : un classement par discipline maximum (SH/DH/DX ou SD/DD/DX)
     @Valid
     @Size(max = 3, message = "Un badiste ne peut pas avoir plus de 3 classements")
     @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
@@ -61,15 +59,12 @@ public class Badiste extends AbstractEntity {
     @Column(name = "numero_licence", length = 10, nullable = false)
     private String numeroLicence;
 
-    // Un badiste peut prendre une licence SANS club (cf. sujet) -> nullable, pas de @NotNull
     @Getter
     @Setter
     @Length(max = 50, message = "club ne doit pas dépasser 50 caractères")
     @Column(name = "club", length = 50, nullable = true)
     private String club;
 
-    // Catégorie recalculée automatiquement à chaque saison :
-    // toujours dérivée de dateNaissance via CategorieAge.fromAnneeNaissance (cf. EntitiesFactory)
     @Getter
     @Setter
     @NotNull(message = "CategorieAge ne doit pas être null")

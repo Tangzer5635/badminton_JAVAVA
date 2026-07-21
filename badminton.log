@@ -55,3 +55,127 @@
 1784557893116:classement-top --discipline SH --nb 10
 1784557909850:match-add-simple --j1 2 --s1j1 21 --s2j1 18 \\\n                                --j2 3 --s1j2 19 --s2j2 21 \\\n                                --discipline SH --dateMatch "2026-07-20T14:00" \\\n                                --lieu "Rennes"
 1784557912794:match-add-simple --j1 5 --s1j1 12 --s2j1 21 --j2 15 --s1j2 15 --s2j2 18 --discipline SD --dateMatch "2026-09-20T14:00" --lieu "Gymnase du Quartier"
+1784636244580:import --file joueurs-import.csv
+1784636416139:badiste-search -n LEFEBVRE
+1784636420258:classement-top --discipline SH --nb 10
+1784636425235:classement-top -d SD -n 5
+1784636582993:match-add-simple --j1 2 --s1j1 21 --s2j1 18 \\\n                                --j2 3 --s1j2 19 --s2j2 21 \\\n                                --discipline SH --dateMatch "2026-07-20T14:00" \\\n                                --lieu "Rennes"
+1784636586265:match-add-simple --j1 5 --s1j1 12 --s2j1 21 --j2 15 --s1j2 15 --s2j2 18 --discipline SD --dateMatch "2026-09-20T14:00" --lieu "Gymnase du Quartier"
+1784636985265:match-add-simple --j1 2 --s1j1 21 --s2j1 18 \\\n                                --j2 3 --s1j2 19 --s2j2 21 \\\n                                --discipline SH --dateMatch "2026-07-20T14:00" \\\n                                --lieu "Rennes"
+1784637033548:match-add-simple --j1 5 --s1j1 12 --s2j1 21 --j2 15 --s1j2 15 --s2j2 18 --discipline SD --dateMatch "2026-09-20T14:00" --lieu "Gymnase du Quartier"
+1784637091249:import --file joueurs-import.csv
+1784637109380:badiste-search -n LEFEBVRE
+1784637114474:classement-top -d SD -n 5
+1784637182361:match-add-simple --j1 5 --s1j1 12 --s2j1 21 --j2 15 --s1j2 15 --s2j2 18 --discipline SD --dateMatch "2026-09-20T14:00" --lieu "Gymnase du Quartier"
+1784637239939:match-add-simple --j1 5 --s1j1 12 --s2j1 21 --j2 15 --s1j2 15 --s2j2 18 --discipline SD --dateMatch "2026-09-21T14:00" --lieu "Gymnase du Quartier"
+1784637254222:match-add-simple --j1 7 --s1j1 12 --s2j1 21 --j2 18 --s1j2 15 --s2j2 18 --discipline SD --dateMatch "2026-09-21T14:00" --lieu "Gymnase du Quartier"
+1784637272871:match-add-simple --j1 7 --s1j1 12 --s2j1 21 --j2 18 --s1j2 15 --s2j2 18 --discipline SH --dateMatch "2026-09-21T14:00" --lieu "Gymnase du Palala"
+1784638119437:import --file joueurs-import.csv
+1784638354768:match-add-simple --j1 7 --s1j1 12 --s2j1 21 --j2 18 --s1j2 15 --s2j2 18 --discipline SH --dateMatch "2026-09-21T14:00" --lieu "Gymnase du Palala"
+1784638559083:import --file joueurs-import.csv
+1784638583500:import --file resources/csv/joueurs-import.csv
+1784638609892:import --file D:\\Java\\BackBase\\Projet\\badmintonV1\\src\\main\\resources\\csv/joueurs-import.csv
+1784638616646:import --file "D:\\Java\\BackBase\\Projet\\badmintonV1\\src\\main\\resources\\csv/joueurs-import.csv"
+1784638838847:import --file "D:/Java/BackBase/Projet/badmintonV1/src/main/resources/csv/joueurs-import.csv"badiste-search -n LEFEBVRE
+1784638860838:import --file "D:/Java/BackBase/Projet/badmintonV1/src/main/resources/csv/joueurs-import.csv"
+1784639359553:badiste-search -n LEFEBVRE
+1784639382701:match-add-simple --j1 2 --s1j1 21 --s2j1 18 \\\n                                --j2 3 --s1j2 19 --s2j2 21 \\\n                                --discipline SH --dateMatch "2026-07-20T14:00" \\\n                                --lieu "Rennes"
+1784639389520:match-add-simple --j1 7 --s1j1 12 --s2j1 21 --j2 18 --s1j2 15 --s2j2 18 --discipline SH --dateMatch "2026-09-21T14:00" --lieu "Gymnase du Palala"
+1784639398517:exit
+1784639423064:import --file "D:/Java/BackBase/Projet/badmintonV1/src/main/resources/csv/joueurs-import.csv"
+1784639593323:badiste-search -n LEFEBVRE
+1784639979223:import --file "D:/Java/BackBase/Projet/badmintonV1/src/main/resources/csv/joueurs-import.csv"
+1784640736327:classement-top -d DD
+1784641088851:import --file "D:/Java/BackBase/Projet/badmintonV1/src/main/resources/csv/joueurs-import.csv"
+1784641521037:classement-top --discipline SH --nb 10
+1784641546956:classement-top -d SD -n 5
+1784641556724:classement-top -d SD -n 1
+1784641567522:match-add-simple --j1 2 --s1j1 21 --s2j1 18 \\\n                                --j2 3 --s1j2 19 --s2j2 21 \\\n                                --discipline SH --dateMatch "2026-07-20T14:00" \\\n                                --lieu "Rennes"
+1784641571495:match-add-simple --j1 7 --s1j1 12 --s2j1 21 --j2 18 --s1j2 15 --s2j2 18 --discipline SH --dateMatch "2026-09-21T14:00" --lieu "Gymnase du Palala"
+1784641802559:import --file "D:/Java/BackBase/Projet/badmintonV1/src/main/resources/csv/joueurs-import.csv"
+1784642707938:match-3sets
+1784642763306:match-add-simple --j1 6 --s1j1 12 --s2j1 21 --s3j1 14 --j2 19 --s1j2 15 --s2j2 18 --s3j2 21 --discipline SH --dateMatch "2026-09-21T14:00" --lieu "Gymnase du Palala"
+1784642769033:import --file "D:/Java/BackBase/Projet/badmintonV1/src/main/resources/csv/joueurs-import.csv"
+1784642786896:match-3-sets
+1784642791477:match-add-simple --j1 6 --s1j1 12 --s2j1 21 --s3j1 14 --j2 19 --s1j2 15 --s2j2 18 --s3j2 21 --discipline SH --dateMatch "2026-09-21T14:00" --lieu "Gymnase du Palala"
+1784642807952:match-3sets
+1784642814820:match-add-simple --j1 7 --s1j1 12 --s2j1 21 --j2 18 --s1j2 15 --s2j2 18  --discipline SH --dateMatch "2026-09-21T14:00" --lieu "Gymnase du Palala"
+1784642825225:match-add-simple --j1 7 --s1j1 12 --s2j1 21 --j2 18 --s1j2 15 --s2j2 18  --discipline SH --dateMatch "2026-09-21T14:00" --lieu "Gymnase du Général"
+1784642829968:match-add-simple --j1 2 --s1j1 21 --s2j1 18 \\\n                                --j2 3 --s1j2 19 --s2j2 21 \\\n                                --discipline SH --dateMatch "2026-07-20T14:00" \\\n                                --lieu "Rennes"
+1784642885831:match-3sets
+1784643882083:match-add \\\n  --idBadiste 1 \\\n  --s1 21 \\\n  --s2 18 \\\n  --s3 21 \\\n  --discipline SH \\\n  --dateMatch 2026-07-21T14:00:00 \\\n  --lieu Rennes
+1784643887312:import --file "D:/Java/BackBase/Projet/badmintonV1/src/main/resources/csv/joueurs-import.csv"
+1784643896586:match-add \\\n  --idBadiste 1 \\\n  --s1 21 \\\n  --s2 18 \\\n  --s3 21 \\\n  --discipline SH \\\n  --dateMatch 2026-07-21T14:00:00 \\\n  --lieu Rennes
+1784643937548:match-add-simple --j1 6 --s1j1 12 --s2j1 21 --s3j1 14 --j2 19 --s1j2 15 --s2j2 18 --s3j2 21 --discipline SH --dateMatch "2026-09-21T14:00" --lieu "Gymnase du Palala"
+1784644145150:help
+1784644377913:import --file "D:/Java/BackBase/Projet/badmintonV1/src/main/resources/csv/joueurs-import.csv"
+1784644385916:badiste-search --nom LEFEBVRE
+1784644389519:badiste-search -n MARTIN
+1784644394746:classement-top --discipline SH --nb 10
+1784644398698:classement-top --discipline SD --nb 5
+1784644401763:classement-top --discipline DH --nb 5
+1784644405152:classement-top --discipline DD --nb 5
+1784644408302:classement-top --discipline DX --nb 5
+1784644412284:badiste-add-classements --id 1 --simple 12500 --double 9800 --mixte 7600
+1784644420711:badiste-add-classements --id 2 --simple 8500
+1784644424306:badiste-add-classements --id 3 --double 9200 --mixte 8100
+1784644427618:badiste-categorie --categorie SENIOR
+1784644461040:26 - FERRY Loubna
+1784644463883:badiste-categorie --categorie JUNIOR
+1784644467636:badiste-categories
+1784644474213:badiste-pourcentage-series
+1784644479557:badiste-discipline-serie --discipline SH --serie N1
+1784644483390:badiste-discipline-serie --discipline SD --serie R4
+1784644489996:badiste-discipline-serie --discipline DX --serie D7
+1784644497521:badiste-delete-licence --licence 0000007
+1784644635146:badiste-delete-licence --licence 5138664
+1784644665420:match-add-simple \\\n--j1 6 --s1j1 12 --s2j1 21 --s3j1 14 \\\n--j2 19 --s1j2 15 --s2j2 18 --s3j2 21 \\\n--discipline SH \\\n--dateMatch "2026-09-22T14:00" \\\n--lieu "Gymnase du Palala"
+1784644669440:import --file "D:/Java/BackBase/Projet/badmintonV1/src/main/resources/csv/joueurs-import.csv"
+1784644682338:match-add-simple \\\n--j1 7 --s1j1 12 --s2j1 21 \\\n--j2 18 --s1j2 15 --s2j2 18 \\\n--discipline SH \\\n--dateMatch "2026-09-21T14:00" \\\n--lieu "Gymnase du Général"
+1784644691299:match-add-simple \\\n--j1 2 --s1j1 21 --s2j1 18 \\\n--j2 3 --s1j2 19 --s2j2 21 \\\n--discipline SH \\\n--dateMatch "2026-07-20T14:00" \\\n--lieu "Rennes"
+1784644694970:match-add-simple \\\n--j1 6 --s1j1 12 --s2j1 21 --s3j1 14 \\\n--j2 19 --s1j2 15 --s2j2 18 --s3j2 21 \\\n--discipline SH \\\n--dateMatch "2026-09-22T14:00" \\\n--lieu "Gymnase du Palala"
+1784644699261:match-3sets
+1784644704755:match-add \\\n--idBadiste 1 \\\n--s1 21 \\\n--s2 18 \\\n--s3 21 \\\n--discipline SH \\\n--dateMatch 2026-07-21T14:00:00 \\\n--lieu Rennes
+1784644730984:badiste-discipline-serie --discipline SH --serie N1
+1784644734019:badiste-discipline-serie --discipline DX --serie D7
+1784644741099:badiste-pourcentage-series
+1784644745350:badiste-categories
+1784644750635:badiste-add-classements --id 3 --double 9200 --mixte 8100
+1784645023960:import --file "D:/Java/BackBase/Projet/badmintonV1/src/main/resources/csv/joueurs-import.csv"
+1784645035521:badiste-categories
+1784645056418:badiste-pourcentage-series
+1784645062920:badiste-discipline-serie --discipline SH --serie N1
+1784645066482:badiste-discipline-serie --discipline SD --serie R4
+1784645079692:badiste-delete-licence --licence 5138664
+1784645140366:badiste-add-classements --id 3 --double 1200 --mixte 1800
+1784645154270:import --file "D:/Java/BackBase/Projet/badmintonV1/src/main/resources/csv/joueurs-import.csv"
+1784645162432:badiste-add-classements --id 3 --double 1200 --mixte 1800
+1784645173905:badiste-search --nom LEFEBVRE
+1784645177680:classement-top --discipline SH --nb 10
+1784645180768:badiste-add-classements --id 1 --simple 12500 --double 9800 --mixte 7600
+1784645184884:badiste-add-classements --id 3 --double 9200 --mixte 8100
+1784645187999:badiste-categorie --categorie SENIOR
+1784645193910:badiste-categories
+1784645200604:badiste-pourcentage-series
+1784645230336:badiste-discipline-serie --discipline SH --serie N2
+1784645291548:import --file "D:/Java/BackBase/Projet/badmintonV1/src/main/resources/csv/joueurs-import.csv"
+1784645299277:badiste-discipline-serie --discipline SH --serie N2
+1784645309539:badiste-pourcentage-series
+1784645322391:badiste-delete-licence --licence 5138664
+1784645327483:badiste-add-classements --id 3 --double 1200 --mixte 1800
+1784645478294:import --file "D:/Java/BackBase/Projet/badmintonV1/src/main/resources/csv/joueurs-import.csv"
+1784645486068:badiste-search -n MARTIN
+1784645489138:classement-top --discipline SH --nb 10
+1784645492230:badiste-add-classements --id 3 --double 1200 --mixte 1800
+1784645498952:badiste-categorie --categorie SENIOR
+1784645502581:badiste-categories
+1784645509068:badiste-pourcentage-series
+1784645513290:badiste-discipline-serie --discipline SH --serie N2
+1784645519216:badiste-delete-licence --licence 5138664
+1784645564487:badiste-delete-licence --licence 6173362
+1784645573224:match-add-simple \\\n--j1 2 --s1j1 21 --s2j1 18 \\\n--j2 3 --s1j2 19 --s2j2 21 \\\n--discipline SH \\\n--dateMatch "2026-07-20T14:00" \\\n--lieu "Rennes"
+1784645577989:match-add-simple \\\n--j1 7 --s1j1 12 --s2j1 21 \\\n--j2 18 --s1j2 15 --s2j2 18 \\\n--discipline SH \\\n--dateMatch "2026-09-21T14:00" \\\n--lieu "Gymnase du Général"
+1784645582195:match-add-simple \\\n--j1 6 --s1j1 12 --s2j1 21 --s3j1 14 \\\n--j2 19 --s1j2 15 --s2j2 18 --s3j2 21 \\\n--discipline SH \\\n--dateMatch "2026-09-22T14:00" \\\n--lieu "Gymnase du Palala"
+1784645587327:match-3sets
+1784645592118:match-add \\\n--idBadiste 1 \\\n--s1 21 \\\n--s2 18 \\\n--s3 21 \\\n--discipline SH \\\n--dateMatch 2026-07-21T14:00:00 \\\n--lieu Rennes
+1784645597158:match-3sets

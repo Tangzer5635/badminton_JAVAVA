@@ -15,12 +15,10 @@ public class BadisteFieldSetMapper implements FieldSetMapper<BadisteLineCSV> {
     @Override
     public BadisteLineCSV mapFieldSet(FieldSet fieldSet) throws BindException {
 
-        // Lire les points avec trim() pour éviter les espaces
         String pointsSimpleStr = fieldSet.readRawString(6).trim();
         String pointsDoubleStr = fieldSet.readRawString(7).trim();
         String pointsMixteStr = fieldSet.readRawString(8).trim();
 
-        // Parser les points (null si vide)
         Integer pointsSimple = pointsSimpleStr.isEmpty() ? null : Integer.parseInt(pointsSimpleStr);
         Integer pointsDouble = pointsDoubleStr.isEmpty() ? null : Integer.parseInt(pointsDoubleStr);
         Integer pointsMixte = pointsMixteStr.isEmpty() ? null : Integer.parseInt(pointsMixteStr);

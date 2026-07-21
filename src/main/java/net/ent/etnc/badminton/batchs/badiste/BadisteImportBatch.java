@@ -26,7 +26,7 @@ public class BadisteImportBatch {
             JobRepository jobRepository,
             PlatformTransactionManager transactionManager) {
         return new StepBuilder("importBadisteStep", jobRepository)
-                .<BadisteLineCSV, Badiste>chunk(100)
+                .<BadisteLineCSV, Badiste>chunk(1000)
                 .transactionManager(transactionManager)
                 .reader(badisteReader)
                 .processor(badisteProcessor)

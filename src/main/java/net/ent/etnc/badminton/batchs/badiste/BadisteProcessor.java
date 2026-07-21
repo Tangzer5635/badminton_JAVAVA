@@ -17,12 +17,10 @@ public class BadisteProcessor implements ItemProcessor<BadisteLineCSV, Badiste> 
 
         if (item.nom() == null || item.prenom() == null) return null;
 
-        // Parser date et sexe depuis les String
         LocalDate dateNaissance = LocalDate.parse(item.dateNaissance());
         Sexe sexe = Sexe.valueOf(item.sexe());
 
-        // Crée le badiste AVEC ses classements (s'il y a des points)
-        return EntitiesFactory.createBadiste(
+        return EntitiesFactory.createBadisteBatch(
                 item.nom(),
                 item.prenom(),
                 dateNaissance,

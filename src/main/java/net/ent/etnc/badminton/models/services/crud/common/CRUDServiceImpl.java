@@ -16,7 +16,6 @@ public abstract class CRUDServiceImpl<T extends AbstractEntity, R extends JpaRep
     @Getter
     protected R monrepo;
 
-
     @Override
     public T findById(Long idT) throws ServiceException {
         try {

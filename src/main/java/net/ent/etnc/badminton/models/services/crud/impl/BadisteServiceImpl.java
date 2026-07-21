@@ -1,5 +1,6 @@
 package net.ent.etnc.badminton.models.services.crud.impl;
 
+import jakarta.transaction.Transactional;
 import net.ent.etnc.badminton.models.entity.Badiste;
 import net.ent.etnc.badminton.models.entity.Classement;
 import net.ent.etnc.badminton.models.entity.EntitiesFactory;
@@ -16,10 +17,7 @@ import net.ent.etnc.badminton.models.services.crud.common.exceptions.ServiceExce
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Optional;
+import java.util.*;
 
 @Service
 public class BadisteServiceImpl extends CRUDServiceImpl<Badiste, BadisteRepository> implements BadisteService {
@@ -61,7 +59,7 @@ public class BadisteServiceImpl extends CRUDServiceImpl<Badiste, BadisteReposito
     public Badiste ajouterClassementsDepuisPoints(Long idBadiste, Integer pointsSimple,
                                                   Integer pointsDouble, Integer pointsMixte) throws ServiceException {
         try {
-            Badiste badiste = this.findById(idBadiste);
+            Badiste badiste = this.findByIdWithClassements(idBadiste);
             Sexe sexe = badiste.getSexe();
 
             if (pointsSimple != null) {
@@ -97,6 +95,7 @@ public class BadisteServiceImpl extends CRUDServiceImpl<Badiste, BadisteReposito
     }
 
     @Override
+    @Transactional
     public Badiste deleteBadisteByNumeroLicence(String numeroLicence) throws ServiceException {
         try {
             return this.monrepo.deleteBadisteByNumeroLicence(numeroLicence);
@@ -110,10 +109,14 @@ public class BadisteServiceImpl extends CRUDServiceImpl<Badiste, BadisteReposito
         try {
             List<Badiste> badistes = this.monrepo.findAll();
             Map<CategorieAge, List<Badiste>> resultat = new HashMap<>();
+
             for (Badiste badiste : badistes) {
                 CategorieAge categorie = badiste.getCategorieAge();
+
+                resultat.putIfAbsent(categorie, new ArrayList<>());
                 resultat.get(categorie).add(badiste);
             }
+
             return resultat;
         } catch (IllegalArgumentException e) {
             throw new ServiceException(e.getMessage(), e);
@@ -123,7 +126,7 @@ public class BadisteServiceImpl extends CRUDServiceImpl<Badiste, BadisteReposito
     @Override
     public Map<SerieClassement, Double> findPourcentageBadisteParSerieClassement() throws ServiceException {
         try {
-            List<Badiste> badistes = monrepo.findAll();
+            List<Badiste> badistes = monrepo.findAllWithClassements();
 
             Map<SerieClassement, Integer> compteur = new HashMap<>();
             int total = 0;

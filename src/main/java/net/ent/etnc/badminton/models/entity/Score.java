@@ -7,15 +7,9 @@ import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.PositiveOrZero;
 import lombok.*;
 
-/**
- * Score d'un badiste sur un match (jusqu'à 3 sets).
- * Classe VALEUR (pas une entité) : elle est embarquée dans la Map
- * scoreMatch de Match via @ElementCollection.
- * Un set se joue en 21 points, prolongations jusqu'à 30 maximum.
- */
 @Embeddable
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-@AllArgsConstructor(access = AccessLevel.PACKAGE) // utilisé par EntitiesFactory
+@AllArgsConstructor(access = AccessLevel.PACKAGE)
 @EqualsAndHashCode(of = {"scoreSet1", "scoreSet2", "scoreSet3"})
 @ToString(of = {"scoreSet1", "scoreSet2", "scoreSet3"})
 public class Score {
@@ -36,7 +30,6 @@ public class Score {
     @Column(name = "score_set2", nullable = false)
     private Integer scoreSet2;
 
-    // Le 3e set est optionnel (joué uniquement en cas d'égalité 1-1)
     @Getter
     @Setter
     @PositiveOrZero(message = "scoreSet3 doit être positif ou nul")

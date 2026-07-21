@@ -9,6 +9,7 @@ import net.ent.etnc.badminton.models.entity.EntitiesFactory;
 import net.ent.etnc.badminton.models.entity.Match;
 import net.ent.etnc.badminton.models.entity.Score;
 import net.ent.etnc.badminton.models.entity.communs.exceptions.ValidException;
+import net.ent.etnc.badminton.models.entity.dto.BadisteDTO;
 import net.ent.etnc.badminton.models.entity.references.Discipline;
 import net.ent.etnc.badminton.models.entity.references.SerieClassement;
 import net.ent.etnc.badminton.models.entity.references.Sexe;
@@ -30,9 +31,6 @@ public class MatchFacadeImpl implements MatchFacade {
 
     @NonNull
     private final MatchService matchCRUDService;
-
-    @NonNull
-    private final BadisteService badisteCRUDService;
 
     @Override
     public List<Match> findAllMatchs() throws FacadeMetierException {
@@ -58,8 +56,8 @@ public class MatchFacadeImpl implements MatchFacade {
                                   Long idJoueur2, Integer s1J2, Integer s2J2, Integer s3J2,
                                   Discipline discipline, LocalDateTime dateMatch, String lieu) throws FacadeMetierException {
         try {
-            return matchCRUDService.creerMatchSimple(idJoueur1,s1J1,s2J1,s3J1,idJoueur2,s1J2,s2J2,s3J2, discipline, dateMatch, lieu);
-        } catch (ValidException | ServiceException e) {
+            return matchCRUDService.creerMatchSimple(idJoueur1, s1J1, s2J1, s3J1, idJoueur2, s1J2, s2J2, s3J2, discipline, dateMatch, lieu);
+        } catch (ServiceException e) {
             throw new FacadeMetierException(e.getMessage(), e);
         }
     }
@@ -76,9 +74,20 @@ public class MatchFacadeImpl implements MatchFacade {
         return null;
     }
 
+    public Match ajouterMatchSimple(Discipline discipline, LocalDateTime dateMatch, String lieu, BadisteDTO badisteDTO, Score score) throws FacadeMetierException {
+        try {
+            return matchCRUDService.ajouterMatchSimple(discipline,dateMatch,lieu,badisteDTO,score);
+        }catch (ServiceException e) {
+            throw new FacadeMetierException(e.getMessage(), e);
+        }
+    }
+
     @Override
     public List<Match> lesMatchsJoueEnTrioSet() throws FacadeMetierException {
-        //TODO
-        return List.of();
+        try {
+            return matchCRUDService.findMatchIn3Sets();
+        } catch (ServiceException e) {
+            throw new FacadeMetierException(e.getMessage(), e);
+        }
     }
 }

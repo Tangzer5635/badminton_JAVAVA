@@ -57,4 +57,13 @@ public interface BadisteRepository extends JpaRepository<Badiste, Long> {
     List<Badiste> findByDisciplineAndSerie(
             @Param("discipline") Discipline discipline,
             @Param("serie") SerieClassement serie);
+
+
+    @Query("""
+            SELECT DISTINCT b
+            FROM Badiste b
+            LEFT JOIN FETCH b.classements
+            """)
+    List<Badiste> findAllWithClassements();
+
 }
