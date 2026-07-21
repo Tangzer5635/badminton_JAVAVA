@@ -9,6 +9,7 @@ import net.ent.etnc.badminton.models.entity.Score;
 import net.ent.etnc.badminton.models.entity.communs.exceptions.ValidException;
 import net.ent.etnc.badminton.models.entity.dto.BadisteDTO;
 import net.ent.etnc.badminton.models.entity.references.Discipline;
+import net.ent.etnc.badminton.models.entity.references.SerieClassement;
 import net.ent.etnc.badminton.models.entity.references.Sexe;
 import net.ent.etnc.badminton.models.entity.references.StatutMatch;
 import net.ent.etnc.badminton.models.repositories.MatchRepository;
@@ -73,5 +74,10 @@ public class MatchServiceImpl extends CRUDServiceImpl<Match, MatchRepository> im
         } catch (IllegalArgumentException | ValidException e) {
             throw new ServiceException(e.getMessage(), e);
         }
+    }
+
+    @Override
+    public List<Match> lesMatchsAvecUnBadisteClasser(SerieClassement serie) throws ServiceException {
+        return this.monrepo.findMatchesWithBadisteClasser(serie);
     }
 }

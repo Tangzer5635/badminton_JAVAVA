@@ -187,3 +187,21 @@
 1784645876085:badiste-categories
 1784645933426:import --file "D:/Java/BackBase/Projet/badmintonV1/src/main/resources/csv/joueurs-import.csv"
 1784645941645:badiste-categories
+1784654897953:help
+1784654905781:import
+1784655469472:match-serie --serie R6
+1784655540421:help
+1784655548623:import -f C:\\Users\\denis\\Pictures\\app\\badminton_JAVAVA\\src\\main\\resources\\csv\\joueurs-import.csv
+1784655572964:import -f "C:/Users/denis/Pictures/app/badminton_JAVAVA/src/main/resources/csv/joueurs-import.csv"
+1784655608723:match-serie --serie R6
+1784655649119:match-add-simple --j1 7 --s1j1 12 --s2j1 21 --j2 18 --s1j2 15 --s2j2 18 --discipline SH --dateMatch "2026-09-21T14:00" --lieu "Gymnase du Palala"
+1784655684148:help
+1784655725635:badiste-pourcentage-series
+1784655750411:match-serie --serie N3match-serie --serie D9
+1784655841461:match-serie --serie R5
+1784655852086:badiste-pourcentage-series
+1784655855815:badiste-categories
+1784655860057:badiste-discipline-serie
+1784655903347:badiste-discipline-serie --discipline DH --serie R5
+1784655920486:match-3sets
+1784655923926:exit

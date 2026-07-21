@@ -64,8 +64,11 @@ public class MatchFacadeImpl implements MatchFacade {
 
     @Override
     public List<Match> lesMatchsOuAumoinsUnBadisteEstClasse(SerieClassement serie) throws FacadeMetierException {
-        //TODO
-        return List.of();
+        try {
+            return matchCRUDService.lesMatchsAvecUnBadisteClasser(serie);
+        } catch (ServiceException e) {
+            throw new FacadeMetierException(e.getMessage(), e);
+        }
     }
 
     @Override
@@ -76,8 +79,8 @@ public class MatchFacadeImpl implements MatchFacade {
 
     public Match ajouterMatchSimple(Discipline discipline, LocalDateTime dateMatch, String lieu, BadisteDTO badisteDTO, Score score) throws FacadeMetierException {
         try {
-            return matchCRUDService.ajouterMatchSimple(discipline,dateMatch,lieu,badisteDTO,score);
-        }catch (ServiceException e) {
+            return matchCRUDService.ajouterMatchSimple(discipline, dateMatch, lieu, badisteDTO, score);
+        } catch (ServiceException e) {
             throw new FacadeMetierException(e.getMessage(), e);
         }
     }

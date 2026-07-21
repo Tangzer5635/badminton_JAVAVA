@@ -4,6 +4,7 @@ import net.ent.etnc.badminton.models.entity.Match;
 import net.ent.etnc.badminton.models.entity.Score;
 import net.ent.etnc.badminton.models.entity.dto.BadisteDTO;
 import net.ent.etnc.badminton.models.entity.references.Discipline;
+import net.ent.etnc.badminton.models.entity.references.SerieClassement;
 import net.ent.etnc.badminton.models.services.crud.common.CRUDService;
 import net.ent.etnc.badminton.models.services.crud.common.exceptions.ServiceException;
 
@@ -17,4 +18,6 @@ public interface MatchService extends CRUDService<Match> {
     List<Match> findMatchIn3Sets() throws ServiceException;
 
     Match ajouterMatchSimple(Discipline discipline, LocalDateTime dateMatch, String lieu, BadisteDTO badisteDTO, Score score) throws ServiceException;
+
+    List<Match> lesMatchsAvecUnBadisteClasser(SerieClassement serie) throws ServiceException;
 }

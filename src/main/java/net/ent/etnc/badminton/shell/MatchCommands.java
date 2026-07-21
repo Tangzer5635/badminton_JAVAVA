@@ -7,6 +7,7 @@ import net.ent.etnc.badminton.models.entity.Match;
 import net.ent.etnc.badminton.models.entity.Score;
 import net.ent.etnc.badminton.models.entity.dto.BadisteDTO;
 import net.ent.etnc.badminton.models.entity.references.Discipline;
+import net.ent.etnc.badminton.models.entity.references.SerieClassement;
 import net.ent.etnc.badminton.models.facades.MatchFacade;
 import net.ent.etnc.badminton.models.facades.exceptions.FacadeMetierException;
 import net.ent.etnc.badminton.shell.commons.ShellHelper;
@@ -141,6 +142,38 @@ public class MatchCommands {
             shellHelper.printError(e.getMessage());
         } catch (Exception e) {
             shellHelper.printError("Erreur : " + e.getMessage());
+        }
+    }
+
+    @ShellMethod(key = "match-serie", value = "Liste les matchs avec au moins un badiste d'une série donnée")
+    public void afficherMatchsParSerie(
+            @ShellOption(value = "--serie") String serieStr) {
+
+        try {
+            SerieClassement serie = SerieClassement.valueOf(serieStr.toUpperCase());
+
+            var matchs = matchFacade.lesMatchsOuAumoinsUnBadisteEstClasse(serie);
+
+            if (matchs.isEmpty()) {
+                shellHelper.printWarning("Aucun match trouvé pour la série " + serie);
+                return;
+            }
+
+            shellHelper.printSuccess("Matchs contenant un badiste de série " + serie + " :");
+
+            for (Match match : matchs) {
+                shellHelper.printInfo(
+                        "ID : " + match.getId()
+                                + " | " + match.getDiscipline()
+                                + " | " + match.getDateMatch()
+                                + " | " + match.getLieu()
+                );
+            }
+
+        } catch (IllegalArgumentException e) {
+            shellHelper.printError("Série invalide.");
+        } catch (FacadeMetierException e) {
+            shellHelper.printError(e.getMessage());
         }
     }
 }

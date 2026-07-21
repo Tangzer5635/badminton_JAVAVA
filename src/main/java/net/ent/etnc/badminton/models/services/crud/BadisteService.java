@@ -1,6 +1,7 @@
 package net.ent.etnc.badminton.models.services.crud;
 
 import net.ent.etnc.badminton.models.entity.Badiste;
+import net.ent.etnc.badminton.models.entity.dto.BadisteDTO;
 import net.ent.etnc.badminton.models.entity.references.CategorieAge;
 import net.ent.etnc.badminton.models.entity.references.Discipline;
 import net.ent.etnc.badminton.models.entity.dto.TopClassementDTO;
@@ -31,4 +32,6 @@ public interface BadisteService extends CRUDService<Badiste> {
     Map<SerieClassement, Double> findPourcentageBadisteParSerieClassement() throws ServiceException;
 
     List<Badiste> lesBadisteParDisciplineEtSerieClassement(Discipline discipline, SerieClassement serie) throws ServiceException;
+
+    Badiste ajouterBadiste(BadisteDTO badiste) throws ServiceException;
 }

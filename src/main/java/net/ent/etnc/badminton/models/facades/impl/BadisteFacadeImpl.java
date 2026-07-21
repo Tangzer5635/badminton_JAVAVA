@@ -103,8 +103,11 @@ public class BadisteFacadeImpl implements BadisteFacade {
 
     @Override
     public Badiste ajouterBadiste(BadisteDTO badiste) throws FacadeMetierException {
-        //TODO
-        return null;
+        try {
+            return badisteCRUDService.ajouterBadiste(badiste);
+        }catch (ServiceException e) {
+            throw new FacadeMetierException(e.getMessage(), e);
+        }
     }
 
 

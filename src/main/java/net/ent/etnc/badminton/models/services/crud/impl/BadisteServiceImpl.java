@@ -5,6 +5,7 @@ import net.ent.etnc.badminton.models.entity.Badiste;
 import net.ent.etnc.badminton.models.entity.Classement;
 import net.ent.etnc.badminton.models.entity.EntitiesFactory;
 import net.ent.etnc.badminton.models.entity.communs.exceptions.ValidException;
+import net.ent.etnc.badminton.models.entity.dto.BadisteDTO;
 import net.ent.etnc.badminton.models.entity.references.CategorieAge;
 import net.ent.etnc.badminton.models.entity.references.Discipline;
 import net.ent.etnc.badminton.models.entity.references.SerieClassement;
@@ -155,6 +156,24 @@ public class BadisteServiceImpl extends CRUDServiceImpl<Badiste, BadisteReposito
         try {
             return monrepo.findByDisciplineAndSerie(discipline, serie);
         } catch (IllegalArgumentException e) {
+            throw new ServiceException(e.getMessage(), e);
+        }
+    }
+
+    @Override
+    public Badiste ajouterBadiste(BadisteDTO badiste) throws ServiceException {
+        try {
+            Badiste badiste1 = EntitiesFactory.createBadiste(
+                    badiste.getNom(),
+                    badiste.getPrenom(),
+                    badiste.getDateNaissance(),
+                    badiste.getNumeroLicence(),
+                    badiste.getClub(),
+                    badiste.getSexe(),
+                    null,null,null
+            );
+            return this.monrepo.save(badiste1);
+        } catch (IllegalArgumentException | ValidException e) {
             throw new ServiceException(e.getMessage(), e);
         }
     }
