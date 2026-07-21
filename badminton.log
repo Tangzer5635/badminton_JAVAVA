@@ -179,3 +179,11 @@
 1784645587327:match-3sets
 1784645592118:match-add \\\n--idBadiste 1 \\\n--s1 21 \\\n--s2 18 \\\n--s3 21 \\\n--discipline SH \\\n--dateMatch 2026-07-21T14:00:00 \\\n--lieu Rennes
 1784645597158:match-3sets
+1784645654941:classement-top --discipline SD --nb 5
+1784645660280:badiste-discipline-serie --discipline SH --serie N2
+1784645669869:badiste-categories
+1784645712405:history
+1784645864465:import --file "D:/Java/BackBase/Projet/badmintonV1/src/main/resources/csv/joueurs-import.csv"
+1784645876085:badiste-categories
+1784645933426:import --file "D:/Java/BackBase/Projet/badmintonV1/src/main/resources/csv/joueurs-import.csv"
+1784645941645:badiste-categories

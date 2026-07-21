@@ -35,6 +35,7 @@ public class BadisteCommands {
 
     @NonNull
     private final JobOperator jobOperator;
+
     @ShellMethod(key = "import", value = "Importe des badistes depuis CSV")
     public void importBadistes(
             @ShellOption(value = {"--file", "-f"}) String filePath) {
@@ -62,7 +63,7 @@ public class BadisteCommands {
             }
             for (Badiste b : resultats) {
                 shellHelper.printInfo("[" + b.getId() + "] " + b.getNom() + " " + b.getPrenom()
-                    + " - " + b.getNumeroLicence() + " - " + b.getClub());
+                        + " - " + b.getNumeroLicence() + " - " + b.getClub());
             }
         } catch (FacadeMetierException e) {
             shellHelper.printError("Erreur : " + e.getMessage());
@@ -127,8 +128,7 @@ public class BadisteCommands {
 
             map.forEach((categorie, liste) -> {
                 shellHelper.printSuccess(categorie.name());
-                liste.forEach(b ->
-                        shellHelper.printInfo(" - " + b.getNom() + " " + b.getPrenom()));
+                shellHelper.printInfo("Nombre de badiste(s) : " + (liste.size()));
             });
 
         } catch (FacadeMetierException e) {
